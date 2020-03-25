@@ -8,12 +8,17 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
     <Header>
-        <div class="menu-toggle">
+        <div class="under-construction">
+            <h1>!!UNDER CONSTRUCTION!!</h1>
+            <h3>This site is being rebuilt from the ground up. Please wash your hands, and check back soon to see what's next.</h3>
+        </div>
+
+        <!-- <div class="menu-toggle">
             <div class="bar half start"></div>
             <div class="bar"></div>
             <div class="bar half end"></div>
@@ -40,6 +45,7 @@
                 </li> -->
             </ul>
         </nav>
+
         <div class="landing-text">
             <h1>Sam Liman</h1>
             <h3>Software Developer</h3>
@@ -66,7 +72,7 @@
                     Pearl Jam, and Metallica; and, though today I primarily listen styles of electronic music that don't
                     conform with most common definitions, my preferences remain quite diverse. For example, the dark and
                     atmospheric melodies of <a href="https://www.youtube.com/watch?v=_wF660LWtAo">Peverelist</a> could
-                    be described as <i>UK Garage/Techno</i>. <a href="https://www.youtube.com/watch?v=rbqU_G9WP0E">
+                    be described as <i>UK Garage </i>and <i>Techno</i>. <a href="https://www.youtube.com/watch?v=rbqU_G9WP0E">
                         Jacques Greene</a>'s work loosely fits the definitions for <i>House Music</i>, but he creates
                     mostly
                     using analog synthesizers, blending the results with jazz-like dynamism. Meanwhile,
@@ -117,7 +123,6 @@
                 <a href="https://beatlesss.herokuapp.com/" alt="beatless app" class="flip-card" target="_blank">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <h1 class="card-title">Beatless</h1>
                             <img src="./images/BeatlessTrack.png" alt="AppImage" style="width:35em">
                         </div>
                         <div class="flip-card-back">
@@ -125,44 +130,68 @@
                 </a>
                 <h4>HTML5, Javascript (ES6), NodeJS, ExpressJS, EJS, CSS, and MongoDB. Deployed using Heroku. 1 week.
                 </h4>
+                <br>
                 <p>
-                    This was the first web application I ever built. Beatless was a very simple music sharing 
-                    application, allowing a user  log in to a specific profile and upload links to songs to share 
-                    with others. If there is a link to an image shared as well, the image will have that link attached 
+                    This was the first web application I ever built. Beatless was a very simple music sharing
+                    application, allowing a user log in to a specific profile and upload links to songs to share
+                    with others. If there is a link to an image shared as well, the image will have that link attached
                     to it on the share page.
                     <br><br>
-                    This project demonstrated to me just how essential real-time, responsive frameworks like React, Vue, 
+                    This project demonstrated to me just how essential real-time, responsive frameworks like React, Vue,
                     ~and Angular have become to the way we use the internet today.
                 </p>
             </div>
         </div>
 
-        </div>
         <div class="portfolio-item">
-            <a href="https://spotles.herokuapp.com/" class="flip-card" target="_blank">
+            <a href="https://carpe-diem-weather-react.herokuapp.com/" class="flip-card" target="_blank">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <h1 class="card-title">Spotless</h1>
+                        <img src="images/carpediem.png" alt="Carpe Diem Weather App" style="width:35em">
+                    </div>
+                    <div class="flip-card-back">
+                        <h1 class="card-title">Carpe Diem Weather</h1>
+            </a>
+            <h4>HTML5, React, Python, Flask, Open Weather Map API, Javascript (ES6), NodeJS, ExpressJS, CSS, Postman,
+                Wireframing, User Stories. Deployed using Heroku. 2 weeks.</h4>
+            <br>
+            <p>
+                This was A team project utilizing paired-coding and daily stand-ups to assess our progress. We created a
+                fully authenticated React app that used a Flask database to manage which data to gather from the Open
+                Weather Map API.
+                <br>
+                My Teammates were Matt Welbourn (https://www.linkedin.com/in/matt-welbourn-58ba6457) and Yettsy Knapp
+                (https://www.linkedin.com/in/yettsy-jo-knapp)
+
+                GitHub Repositories:
+                Flask: https://github.com/mlwelbourn/Weather-Flask-App.git
+                React: https://github.com/yettsyjk/WeatherReactApp.git
+            </p>
+        </div>
+
+        <div class="portfolio-item">
+            <a href="https://carpe-diem-weather-react.herokuapp.com/" class="flip-card" target="_blank">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
                         <img src="images/SpotlessCreate.png" alt="Spotless Radio App" style="width:35em">
                     </div>
                     <div class="flip-card-back">
                         <h1 class="card-title">Spotless</h1>
             </a>
-            <h4>HTML5, React, Python, Javascript (ES6), NodeJS, ExpressJS, CSS, and MongoDB. Deployed using Heroku. 2
-                weeks.</h4>
+            <h4>HTML5, React, Python, Javascript (ES6), NodeJS, ExpressJS, CSS, and MongoDB. Deployed using Heroku. 2 weeks.</h4>
+            <br>
             <p>
-                My goal for this app is still to create to create a basic radio app using machine learning, which would
-                be able to offer users new tracks that they would like. Due to extremely limited time constraints, that
-                goal was tabled, and what you see here is a playlist app not unlike <i>Beatless</i>, though this was
-                created entirely using React.
+                My goal for this app was to create a basic radio app which utilized machine learning to offer to offer 
+                users new tracks that they would like. Due to extremely limited time constraints, goal was tabled, 
+                and what you see here is a simple playlist management app. Similar to <i>Beatless</i> on the surface, this 
+                is a functional React App. This project will continue to evolve .
             </p>
         </div>
-        </div>
-        </div>
+    </section>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
