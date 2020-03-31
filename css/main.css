@@ -1,6 +1,82 @@
+/*global*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 11px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    color: #eee;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: url('images/samSnow.jpg') no-repeat center fixed;
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+    color: #eee;
+}
+
+p {
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+img {
+    width: 100%;
+}
+
+/* Header */
+header{
+    width: 100%;
+    height: 100vh;
+}
+
+.top-nav{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #16162d;
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    transition: all 650ms cubic-bezier(1, 0, 0, 1);
+}
+
+.nav-list{
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li{
+    margin: 0 2rem;
+}
+
+.nav-link{
+    font-family: 'Kaushan Script', sans-serif;
+}
+
 .under-construction {
-    
-    animation: blinker 3s linear infinite;
+    animation: blinker 2s linear infinite;
+    color: yellow;
+    font-size: larger;
+    font-weight: bolder;
+    text-align: center;
+    background-color: red;
+}
+
+.under-construction-no-flash {
     color: yellow;
     font-size: larger;
     font-weight: bolder;
@@ -12,12 +88,6 @@
     50% {
         opacity: 0;
     }
-}
-.body {
-    background: linear-gradient( rgba(167, 115, 115, 0.75), rgba(0, 0, 0, 0.75) )
-    url('images/samSnow.jpg');
-    font-weight: 300;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 }
 
 /* Style font awesome icons */
@@ -36,9 +106,6 @@
     opacity: 0.7;
 }
 
-html {
-    scroll-behavior: smooth;
-}
 body {
     background-color: rgb(26, 26, 26);
     color: white;
@@ -80,6 +147,7 @@ nav a {
     transition: transform 1s;
     animation: fade-down 1.5s 1 ease-in-out;
 }
+
 nav a:hover {
     transform: scale(1.09);
     color: rgb(89,180,228);

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sam Liman</title>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
@@ -13,14 +14,7 @@
 
 <body>
     <Header>
-        <div class="under-construction">
-            <h1>!!UNDER CONSTRUCTION!!</h1>
-            <h3>This site is being rebuilt from the ground up. 
-            <br>
-            Please wash your hands, and check back soon to see what's next.</h3>
-        </div>
-
-        <!-- <div class="menu-toggle">
+        <div class="menu-toggle">
             <div class="bar half start"></div>
             <div class="bar"></div>
             <div class="bar half end"></div>
@@ -48,6 +42,16 @@
             </ul>
         </nav>
 
+        <div class="under-construction">
+            <h1>.</h1>
+            <h1>!!UNDER CONSTRUCTION!!</h1>
+        </div>
+        <div class="under-construction-no-flash">
+            <h3>This site is being rebuilt from the ground up. <br>
+                More coming soon, but today I'm sewing masks to donate to the hospital. <br>
+                Please wash your hands, stay healthy, and check back soon to see what's next.</h3>
+        </div>
+
         <div class="landing-text">
             <h1>Sam Liman</h1>
             <h3>Software Developer</h3>
@@ -61,10 +65,12 @@
             </div>
             <div class="about-sam">
                 <div class="about-heading">
-                    <h1>About Me</h1>
+                    <h1>About</h1>
                 </div>
                 <p>
-                    Hiya! I'm Sam, a Software Engineer living in Denver, Colorado.
+                    Hello, and welcome!
+                    <br><br>
+                    I'm Sam Liman, a Software Engineer living in Denver, Colorado.
                     <br><br>
                     People are frequently surprised to hear that I am a second-generation native to such a colorful
                     state. Until they get to know me. I am drawn towards a myriad of creative endeavors, including
@@ -74,7 +80,8 @@
                     Pearl Jam, and Metallica; and, though today I primarily listen styles of electronic music that don't
                     conform with most common definitions, my preferences remain quite diverse. For example, the dark and
                     atmospheric melodies of <a href="https://www.youtube.com/watch?v=_wF660LWtAo">Peverelist</a> could
-                    be described as <i>UK Garage </i>and <i>Techno</i>. <a href="https://www.youtube.com/watch?v=rbqU_G9WP0E">
+                    be described as <i>UK Garage </i>and <i>Techno</i>. <a
+                        href="https://www.youtube.com/watch?v=rbqU_G9WP0E">
                         Jacques Greene</a>'s work loosely fits the definitions for <i>House Music</i>, but he creates
                     mostly
                     using analog synthesizers, blending the results with jazz-like dynamism. Meanwhile,
@@ -103,12 +110,17 @@
                         <i class="fab fa-linkedin"></i>
                     </li>
                     <li>
-                        <a href="#" class="icon-link"></a>
-                        <i class="far fa-file-pdf"></i>
+                        <a href="images/Sam Liman Resume.docx" class="icon-link"></a>
+                        <i class="fas fa-file-pdf"></i>
                     </li>
                     <li>
-                        <a href="#" class="icon-link"></a>
-                        <i class="far fa-file-word"></i>
+                        <a href="images/Sam Liman Resume.pdf" class="icon-link"></a>
+                        <i class="fas fa-file-word"></i>
+                    </li>
+                    <li>
+                        <a href="https://docs.google.com/document/d/107qnu26HYap6bLPHkaOSRHyTmWdIPGax4Mw7XKnHTSc/edit?usp=sharing"
+                            class="icon-link"></a>
+                        <i class="fab fa-google-drive"></i>
                     </li>
                 </ul>
             </div>
@@ -180,16 +192,42 @@
                     <div class="flip-card-back">
                         <h1 class="card-title">Spotless</h1>
             </a>
-            <h4>HTML5, React, Python, Javascript (ES6), NodeJS, ExpressJS, CSS, and MongoDB. Deployed using Heroku. 2 weeks.</h4>
+            <h4>HTML5, React, Python, Javascript (ES6), NodeJS, ExpressJS, CSS, and MongoDB. Deployed using Heroku. 2
+                weeks.</h4>
             <br>
             <p>
-                My goal for this app was to create a basic radio app which utilized machine learning to offer to offer 
-                users new tracks that they would like. Due to extremely limited time constraints, goal was tabled, 
-                and what you see here is a simple playlist management app. Similar to <i>Beatless</i> on the surface, this 
+                My goal for this app was to create a basic radio app which utilized machine learning to offer to offer
+                users new tracks that they would like. Due to extremely limited time constraints, goal was tabled,
+                and what you see here is a simple playlist management app. Similar to <i>Beatless</i> on the surface,
+                this
                 is a functional React App. This project will continue to evolve .
             </p>
         </div>
     </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-heading">
+                <h1>Contact</h1>
+                <h3>Let's Work Together</h3>
+            </div>
+            <form action="">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" placeholder="Enter your email" required>
+                <label for="subject">Subject:</label>
+                <textarea type="text" id="subject" name="subject" cols="10" rows="10"></textarea>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </section>
+    <footer class="copyright">
+        <div class="up" id="up">
+            <i class="fas fa-chevron-up"></i>
+            <p>&copy; 2020 Sam Liman</p>
+        </div>
+    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
