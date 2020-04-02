@@ -1,158 +1,250 @@
-   /*global*/
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/*global*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html{
-    font-size: 11px;
-    font-family: "Open Sans", sans-serif; 
-    color: #ffe838;
-    scroll-behavior: smooth;
+html {
+  font-size: 11px;
+  font-family: "Open Sans", sans-serif;
+  color: #ffe838;
+  scroll-behavior: smooth;
 }
 
-body{
-    width: 100%;
-    height: 100%;
-    background: linear-gradient( rgba(22, 22, 45, 0.5), rgba(22, 22, 45, 0.5) ), url('./images/samSnow.jpg') no-repeat center fixed;
-    background-size: cover;
+body {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(22, 22, 45, 0.5), rgba(22, 22, 45, 0.5)), url("./images/samSnow.jpg") no-repeat center fixed;
+  background-size: cover;
 }
 
-a{
-    text-decoration: none;
-    color: #ffe838;
+a {
+  text-decoration: none;
+  color: #ffe838;
 }
 
-p{
-    font-size: 1.8rem;
-    font-weight: 300;
+p {
+  font-size: 1.8rem;
+  font-weight: 300;
 }
 
-img{
-    width: 100%;
+img {
+  width: 100%;
 }
 
 /* Header */
-header{
-    width: 100%;
-    height: 100vh;
+header {
+  width: 100%;
+  height: 100vh;
 }
 
-.top-nav{
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    top: -100vh;
-    z-index: 50;
-    background-color: #16162d;
-    border-bottom-right-radius: 100%;
-    border-bottom-left-radius: 100%;
-    transition: all 650ms cubic-bezier(1, 0, 0, 1);
+.top-nav {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: -100vh;
+  z-index: 50;
+  background-color: #16162d;
+  border-bottom-right-radius: 100%;
+  border-bottom-left-radius: 100%;
+  transition: all 650ms cubic-bezier(1, 0, 0, 1);
 }
 
-.nav-list{
-    list-style: none;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.nav-list {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-li{
-    margin: 0 2rem;
+li {
+  margin: 0 2rem;
 }
 
-.nav-link{
-    font-family: 'Kaushan Script', cursive;
-    font-size: 5rem;
-    padding: 1rem;
+.nav-link {
+  font-family: "Kaushan Script", cursive;
+  font-size: 5rem;
+  padding: 1rem;
 }
 
 .nav-link:hover,
-.nav-link:focus{
-    background: linear-gradient(to top, #ffe838, #fd57bf);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
+.nav-link:focus {
+  background: linear-gradient(to top, #ffe838, #fd57bf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.top-nav.open{
-    top: 0;
-    border-radius: initial;
+.top-nav.open {
+  top: 0;
+  border-radius: initial;
 }
 
-.menu-toggler{
-    position: absolute;
-    top: 5rem;
-    right: 5rem;
-    width: 5rem;
-    height: 4rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-    z-index: 1500;
-    transition: transform 650ms ease-out;
+.menu-toggler {
+  position: absolute;
+  top: 5rem;
+  right: 5rem;
+  width: 5rem;
+  height: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1500;
+  transition: transform 650ms ease-out;
 }
 
-.menu-toggler.open{
-    transform: rotate(-45deg);
+.menu-toggler.open {
+  transform: rotate(-45deg);
 }
 
-.bar{
-    background: linear-gradient(to right, #ffe838, #fd57bf);
-    width: 100%;
-    height: 4px;
-    border-radius: .8rem;
+.bar {
+  background: linear-gradient(to right, #ffe838, #fd57bf);
+  width: 100%;
+  height: 4px;
+  border-radius: 0.8rem;
 }
 
-.bar.half{
-    width: 50%;
+.bar.half {
+  width: 50%;
 }
 
-.bar.start{
-    transform-origin: right;
-    transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+.bar.start {
+  transform-origin: right;
+  transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
 }
 
-.open .bar.start{
-    transform: rotate(-450deg) translateX(.8rem);
+.open .bar.start {
+  transform: rotate(-450deg) translateX(0.8rem);
 }
 
-.bar.end{
-    align-self: flex-end;
-    transform-origin: left;
-    transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+.bar.end {
+  align-self: flex-end;
+  transform-origin: left;
+  transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
 }
 
-.open .bar.end{
-    transform: rotate(-450deg) translateX(-.8rem);
+.open .bar.end {
+  transform: rotate(-450deg) translateX(-0.8rem);
 }
 
+.landing-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+}
+.landing-text h1 {
+  font-size: 20rem;
+  font-family: "Open Sans", sans-serif;
+  background: linear-gradient(to top, #ffe838, #fd57bf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 1rem;
+  user-select: none;
+}
+.landing-text h6 {
+  font-size: 2rem;
+  font-weight: 300;
+}
 
+/*About*/
+.about .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-heading {
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 0;
+  margin-bottom: 6rem;
+}
+.about-heading h1 {
+  font-size: 10rem;
+  opacity: 0.3;
+}
+.about-heading h1 h6 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.profile-img {
+  flex: 1;
+  margin-right: 5rem;
+}
+
+.about-details {
+  flex: 1;
+}
+
+.social {
+  align-self: center;
+  width: 80%;
+  display: flex;
+  background-color: black;
+  margin-top: 5rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.social i {
+  font-size: 6rem;
+  transition: color 650ms;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.fa-github {
+  color: #fff;
+}
+
+.fa-linkedin {
+  color: #0077b5;
+}
+
+.fa-file-pdf {
+  color: #cc1c22;
+}
+
+.fa-file-word {
+  color: #2159be;
+}
+
+.fa-google-drive {
+  color: #32a260;
+}
 
 /* under-construction */
 .under-construction {
-    animation: blinker 2s linear infinite;
-    color: yellow;
-    font-size: larger;
-    font-weight: bolder;
-    text-align: center;
-    background-color: red;
+  animation: blinker 2s linear infinite;
+  color: yellow;
+  font-size: larger;
+  font-weight: bolder;
+  text-align: center;
+  background-color: red;
 }
 
 .under-construction-no-flash {
-    color: yellow;
-    font-size: larger;
-    font-weight: bolder;
-    text-align: center;
-    background-color: red;
+  color: yellow;
+  font-size: larger;
+  font-weight: bolder;
+  text-align: center;
+  background-color: red;
 }
 
 @keyframes blinker {
-    50% {
-        opacity: 0;
-    }
+  50% {
+    opacity: 0;
+  }
 }
+
+/*# sourceMappingURL=main.css.map */
