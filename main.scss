@@ -72,7 +72,7 @@
            text-align: center;
            color: #ffe838;
            margin-bottom: 1rem;
-           
+
        }
 
        h1::before,
@@ -237,9 +237,9 @@
        justify-content: center;
 
        h3 {
-        text-align: center;
-        color: #ffe838;
-        font-size: 1.5rem;
+           text-align: center;
+           color: #ffe838;
+           font-size: 1.5rem;
        }
    }
 
@@ -288,19 +288,19 @@
        margin-top: 5rem;
 
        // img {
-           //     size: 6rem;
-           //     transition: color 650ms;
-           // }
-  
-           i {
-               font-size: 6rem;
-               transition: color 650ms;
-           }
+       //     size: 6rem;
+       //     transition: color 650ms;
+       // }
 
-           h3 {
-               text-align: center;
-           }
-        }
+       i {
+           font-size: 6rem;
+           transition: color 650ms;
+       }
+
+       h3 {
+           text-align: center;
+       }
+   }
 
    .nav-list {
        display: flex;
@@ -335,14 +335,43 @@
        color: #2159be;
    }
 
+//    fa-react:hover{
+
+//    }
+
+//    fa-js-square:hover{
+
+//    }
+
+// fa-css-alt:hover{
+
+// }
+
+// fa-html5:hover{
+
+// }
+
+// fa-python:hover{
+
+// }
+
+// fa-node:hover{
+
+// }
+
    .google-docs-icon {
        -webkit-filter: saturate(0%) grayscale(100%) brightness(69%) contrast(1000%) invert(1)
    }
 
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-} 
+   @-webkit-keyframes fadein {
+       from {
+           opacity: 0;
+       }
+
+       to {
+           opacity: 1;
+       }
+   }
 
    .google-docs-icon:hover {
        -webkit-filter: grayscale(0);
@@ -426,34 +455,32 @@
        h2 {
            color: #7E46B3
        }
-       
-          h6 {
-              font-size: 1.5rem;
-              text-transform: uppercase;
-              font-weight: 300;
-              opacity: .3;
-          }
-       
-        .cta {
-              display: inline-block;
-              font-size: 1.5rem;
-              text-transform: uppercase;
-              color: #3883ff;
-              transition: color 650ms;
-          }
-        
-        .cta-1 {
-              display: inline-block;
-              margin-top: 2.5rem;
-              font-size: 1.5rem;
-              text-transform: uppercase;
-              color: #3883ff;
-              transition: color 650ms;
-          }
-       
+
+       h6 {
+           font-size: 1.5rem;
+           text-transform: uppercase;
+           font-weight: 300;
+           opacity: .3;
+       }
+
+       .cta {
+           display: inline-block;
+           font-size: 1.5rem;
+           color: #3883ff;
+           transition: color 650ms;
+       }
+
+       .cta-1 {
+           display: inline-block;
+           margin-top: 2.5rem;
+           font-size: 1.5rem;
+           color: #3883ff;
+           transition: color 650ms;
+       }
+
        .cta:hover {
-              color: #0f2857;
-          }
+           color: #039440;
+       }
    }
 
    /* contacts */
@@ -503,6 +530,10 @@
        background-color: #16162d;
        padding: 2rem 0;
        position: relative;
+
+       p {
+           font-size: 1.3rem;
+       }
    }
 
    .up {
@@ -524,8 +555,12 @@
        margin: auto;
    }
 
-   .copyright p {
-       font-size: 1.4rem;
+   .fa-chevron-up::before {
+       content: \f077;
+   }
+
+   footer {
+       display: block;
    }
 
    /*Start animations*/
@@ -544,8 +579,9 @@
    }
 
    @media screen and (max-width: 768px) {
+
        body {
-           background: url("images/color.jpg") no-repeat center fixed;
+           background: linear-gradient(rgba(22, 22, 45, 0.7), rgba(22, 22, 45, 0.7)), url('./images/samSnow.jpg') no-repeat center fixed;
            background-size: cover;
        }
 
@@ -629,30 +665,5 @@
        .portfolio-description {
            margin: 0;
            order: 2;
-       }
-   }
-
-
-
-   .under-construction {
-       animation: blinker 2s linear infinite;
-       color: yellow;
-       font-size: larger;
-       font-weight: bolder;
-       text-align: center;
-       background-color: red;
-   }
-
-   .under-construction-no-flash {
-       color: yellow;
-       font-size: larger;
-       font-weight: bolder;
-       text-align: center;
-       background-color: red;
-   }
-
-   @keyframes blinker {
-       50% {
-           opacity: 0;
        }
    }

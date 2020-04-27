@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*global*/
 * {
   margin: 0;
@@ -361,7 +362,6 @@ li {
 .portfolio-description .cta {
   display: inline-block;
   font-size: 1.5rem;
-  text-transform: uppercase;
   color: #3883ff;
   transition: color 650ms;
 }
@@ -369,12 +369,11 @@ li {
   display: inline-block;
   margin-top: 2.5rem;
   font-size: 1.5rem;
-  text-transform: uppercase;
   color: #3883ff;
   transition: color 650ms;
 }
 .portfolio-description .cta:hover {
-  color: #0f2857;
+  color: #039440;
 }
 
 /* contacts */
@@ -424,6 +423,9 @@ input[type=submit]:hover {
   padding: 2rem 0;
   position: relative;
 }
+.copyright p {
+  font-size: 1.3rem;
+}
 
 .up {
   position: absolute;
@@ -444,8 +446,12 @@ input[type=submit]:hover {
   margin: auto;
 }
 
-.copyright p {
-  font-size: 1.4rem;
+.fa-chevron-up::before {
+  content: ;
+}
+
+footer {
+  display: block;
 }
 
 /*Start animations*/
@@ -462,7 +468,7 @@ input[type=submit]:hover {
 }
 @media screen and (max-width: 768px) {
   body {
-    background: url("images/color.jpg") no-repeat center fixed;
+    background: linear-gradient(rgba(22, 22, 45, 0.7), rgba(22, 22, 45, 0.7)), url("./images/samSnow.jpg") no-repeat center fixed;
     background-size: cover;
   }
 
@@ -544,28 +550,6 @@ input[type=submit]:hover {
   .portfolio-description {
     margin: 0;
     order: 2;
-  }
-}
-.under-construction {
-  animation: blinker 2s linear infinite;
-  color: yellow;
-  font-size: larger;
-  font-weight: bolder;
-  text-align: center;
-  background-color: red;
-}
-
-.under-construction-no-flash {
-  color: yellow;
-  font-size: larger;
-  font-weight: bolder;
-  text-align: center;
-  background-color: red;
-}
-
-@keyframes blinker {
-  50% {
-    opacity: 0;
   }
 }
 
