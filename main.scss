@@ -169,8 +169,8 @@
        cursor: pointer;
        z-index: 1500;
        transition: transform 650ms ease-out;
-   }
-
+    }   
+    
    .menu-toggler.open {
        transform: rotate(-45deg);
    }
@@ -183,8 +183,8 @@
    }
 
    .bar.half {
-       width: 50%;
-   }
+   width: 50%;
+}
 
    .bar.start {
        transform-origin: right;
@@ -578,6 +578,8 @@
        }
    }
 
+   /*media queries*/
+
    @media screen and (max-width: 768px) {
 
        body {
@@ -622,8 +624,25 @@
        }
 
        .icon-container {
-           font-size: 4rem;
+           width: 7rem;
+           height: 7rem;
+
+           i{
+               font-size: 4rem;
+           }
        }
+
+       /* save for later
+       .timeline ul{
+           margin: 0 0 0 auto;
+
+            .date::before{
+                left: -20rem;
+
+            .date::after{
+                left: -5.9rem;
+       } */
+       
    }
 
    @media screen and (max-width: 600px) {
@@ -665,5 +684,19 @@
        .portfolio-description {
            margin: 0;
            order: 2;
+       }
+
+       /* save for later
+       timeline p{
+           font-size: 1.4rem;
+       }
+       */
+
+       form{
+        width: 100%;
+       }
+
+       .up{
+           right: 2rem;
        }
    }
