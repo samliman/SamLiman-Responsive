@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="./main.css">
 </head>
 
@@ -42,14 +42,19 @@
             </ul>
         </nav>
 
-        <div class="landing-text">
-            <h1>Sam Liman</h1>
-            <h6>Software Developer</h6>
+        <div class="landing-text hero-center">
+            <h1 class="hero-logo" data-aos="zoom-in">Sam Liman</h1>
+            <h6 class="hero__text" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="400">Software Developer</h6>
+        </div>
+            <span class="hero__scroll" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="1000">
+				Scroll down <br>
+				<i class="fas fa-chevron-down"></i>
+			</span>
     </Header>
 
     <section class="about" id="about">
         <div class="container">
-            <div class="profile.img">
+            <div class="profile.img" data-aos="fade-right" data-aos-delay="300">
                 <img src="images/sam.jpg" alt="A very happy Sam">
             </div>
             <div class="about-details">
@@ -74,7 +79,7 @@
                     href="https://www.youtube.com/watch?v=_K-isImH-jc">Christian Löffler</a> produces
                     dancehall-friendly, melodic <i>House Music</i>, frequently combining acoustic instruments with his own production.
                     <br><br> -->
-                    I began working with computers in 2015 as an 'IT Guy', moving back to my hometown, Steamboat
+                    I began working with computers in 2015 as an 'IT Guy', moving back to my hometown of `Steamboat
                     Springs, Colorado, to pursue this opportunity. After 4 years in the field, I felt stuck. Software
                     development felt like a natural evolution on this path.
                     <br><br>
@@ -129,11 +134,11 @@
                         <img src="./images/BeatlessTrack.png" alt="Beatless"></a>
                 </div>
                 <div class="portfolio-description">
-                    <h6>Javascript, NodeJS, ExpressJS, MongoDB</h6>
                     <h1>Beatless</h1>
                     <p>
                         My first web app. A simple music sharing application.<br>Deployed on Heroku.
                     </p>
+                    <h6>Javascript, NodeJS, ExpressJS, MongoDB</h6>
                     <a href="https://beatlesss.herokuapp.com/" alt="beatless app" class="cta-1 cta">Have a look at the
                         app</a><br>
                     <a href="https://github.com/samliman/project-2-playlists/" alt="beatless app source code"
@@ -263,6 +268,9 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="./main.js"></script>
 </body>
 

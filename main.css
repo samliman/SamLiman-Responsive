@@ -7,7 +7,6 @@
 }
 
 html {
-  font-size: 13;
   font-family: "Open Sans", sans-serif;
   color: #eee;
   scroll-behavior: smooth;
@@ -142,6 +141,7 @@ li {
 .nav-link:focus {
   background: linear-gradient(to top, #ffe838, #FC56AB);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -212,6 +212,7 @@ li {
   font-family: "Kaushan Script", cursive;
   background: linear-gradient(to top, #ffe838, #fd57bf);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   padding: 1rem;
   user-select: none;
@@ -219,6 +220,14 @@ li {
 .landing-text h6 {
   font-size: 2rem;
   font-weight: 400;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+user agent stylesheet i {
+  font-style: italic;
 }
 
 /*About*/
@@ -304,9 +313,18 @@ li {
 
 .google-docs-icon {
   -webkit-filter: saturate(0%) grayscale(100%) brightness(69%) contrast(1000%) invert(1);
+  filter: saturate(0%) grayscale(100%) brightness(69%) contrast(1000%) invert(1);
 }
 
 @-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadein {
   from {
     opacity: 0;
   }
@@ -318,6 +336,7 @@ li {
   -webkit-filter: grayscale(0);
   filter: none;
   -webkit-animation: fadein 2s;
+  animation: fadein 2s;
 }
 
 /* services */
@@ -466,6 +485,40 @@ footer {
     box-shadow: 0 0 0 0 rgba(253, 87, 191, 0);
   }
 }
+/* other header*/
+.hero__scroll {
+  position: absolute;
+  bottom: 60px;
+  width: 200px;
+  margin: auto;
+  display: block;
+  cursor: pointer;
+  padding-bottom: 40px;
+  left: 0;
+  right: 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+.hero__scroll .fa-chevron-down {
+  margin-top: 20px;
+  display: block;
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse 2s infinite;
+  color: #ffee00;
+}
+
+.fa-chevron-down::before {
+  border-style: solid;
+  border-width: 0.25em 0.25em 0 0;
+  content: "";
+  display: inline-block;
+  height: 20px;
+  position: relative;
+  vertical-align: top;
+  width: 20px;
+}
+
+/*media queries*/
 @media screen and (max-width: 768px) {
   body {
     background: linear-gradient(rgba(22, 22, 45, 0.7), rgba(22, 22, 45, 0.7)), url("./images/samSnow.jpg") no-repeat center fixed;
@@ -496,7 +549,7 @@ footer {
     font-size: 8rem;
   }
 
-  .section-heading {
+  .section-heading h1 {
     font-size: 3rem;
   }
 
@@ -509,8 +562,23 @@ footer {
   }
 
   .icon-container {
+    width: 7rem;
+    height: 7rem;
+  }
+  .icon-container i {
     font-size: 4rem;
   }
+
+  /* save for later
+  .timeline ul{
+      margin: 0 0 0 auto;
+
+       .date::before{
+           left: -20rem;
+
+       .date::after{
+           left: -5.9rem;
+  } */
 }
 @media screen and (max-width: 600px) {
   .menu-toggler {
@@ -550,6 +618,19 @@ footer {
   .portfolio-description {
     margin: 0;
     order: 2;
+  }
+
+  /* save for later
+  timeline p{
+      font-size: 1.4rem;
+  }
+  */
+  form {
+    width: 100%;
+  }
+
+  .up {
+    right: 2rem;
   }
 }
 
