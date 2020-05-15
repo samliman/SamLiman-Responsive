@@ -215,7 +215,7 @@
        z-index: 1;
 
        h1 {
-           font-size: 7rem;
+           font-size: 12rem;
            font-family: 'Kaushan Script', cursive;
            background: linear-gradient(to top, #ffe838, #fd57bf);
            -webkit-background-clip: text;
@@ -231,14 +231,46 @@
        }
    }
 
-*, *::before, *::after {
-    box-sizing: border-box;
-}
+   .hero__scroll {
+       position: absolute;
+       bottom: 60px;
+       width: 200px;
+       margin: auto;
+       display: block;
+       cursor: pointer;
+       padding-bottom: 40px;
+       left: 0;
+       right: 0;
+       text-transform: uppercase;
+       text-align: center;
 
-user agent stylesheet
-i {
-    font-style: italic;
-}
+       .down {
+           margin-top: 30px;
+           display: block;
+           -webkit-animation: bounce 2s infinite;
+           animation: bounce 2s infinite;
+           display: inline-block;
+           //    vertical-align: top;
+           width: 5rem;
+           height: 5rem;
+           //    background-color: #ffffff;
+           color: #FF4081;
+           top: -2.5rem;
+           right: 5rem;
+           border-radius: 100%;
+           cursor: pointer;
+       }
+   }
+
+   *,
+   *::before,
+   *::after {
+       box-sizing: border-box;
+   }
+
+   user agent stylesheet i {
+       font-style: italic;
+   }
 
    /*About*/
    .about .container {
@@ -345,53 +377,11 @@ i {
        color: #2159be;
    }
 
-   //    fa-react:hover{
-
-   //    }
-
-   //    fa-js-square:hover{
-
-   //    }
-
-   // fa-css-alt:hover{
-
-   // }
-
-   // fa-html5:hover{
-
-   // }
-
-   // fa-python:hover{
-
-   // }
-
-   // fa-node:hover{
-
-   // }
-
    .google-docs-icon {
+       margin-left: 0px;
+       margin-right: 0px;
        -webkit-filter: saturate(0%) grayscale(100%) brightness(69%) contrast(1000%) invert(1);
        filter: saturate(0%) grayscale(100%) brightness(69%) contrast(1000%) invert(1)
-   }
-
-   @-webkit-keyframes fadein {
-       from {
-           opacity: 0;
-       }
-
-       to {
-           opacity: 1;
-       }
-   }
-
-   @keyframes fadein {
-       from {
-           opacity: 0;
-       }
-
-       to {
-           opacity: 1;
-       }
    }
 
    .google-docs-icon:hover {
@@ -402,8 +392,21 @@ i {
    }
 
    /* services */
-   // /* skills */
-   // .my-skills {
+    /* ... */
+
+    /* skills */
+
+   .my-skills {
+    i {
+        font-size: 6rem;
+        transition: color 650ms;
+        margin-top: 6rem;
+    }
+
+    h3 {
+        text-align: center;
+    }
+}
    //     margin-top: 10rem;
    //     display: grid;
    //     grid-template-columns: repeat(auto-fit, minmax(25rem,1fr));
@@ -441,14 +444,37 @@ i {
    //     }
    // }
 
+   //    fa-react:hover{
+
+   //    }
+
+   //    fa-js-square:hover{
+
+   //    }
+
+   // fa-css-alt:hover{
+
+   // }
+
+   // fa-html5:hover{
+
+   // }
+
+   // fa-python:hover{
+
+   // }
+
+   // fa-node:hover{
+
+   // }
+
    /* portfolio */
 
    .portfolio-item {
        display: flex;
        align-self: center;
        justify-content: center;
-       margin-bottom: 5rem;
-
+       margin-bottom: 5rem; 
    }
 
    .portfolio-item:last-child {
@@ -456,12 +482,12 @@ i {
    }
 
    .profile-img {
-       width: 50rem;
-       flex: 1;
+       max-width: 60rem;
    }
 
    .portfolio-description {
        flex: 1;
+       max-width: 60rem;
 
        h1 {
            font-size: 3rem;
@@ -480,9 +506,8 @@ i {
 
        h6 {
            font-size: 1.5rem;
-           text-transform: uppercase;
            font-weight: 300;
-           opacity: .3;
+           opacity: .5;
        }
 
        .cta {
@@ -562,7 +587,7 @@ i {
        position: absolute;
        width: 5rem;
        height: 5rem;
-       background-color: #eee;
+       background-color: #ffffff;
        top: -2.5rem;
        right: 5rem;
        border-radius: 100%;
@@ -586,6 +611,24 @@ i {
    }
 
    /*Start animations*/
+
+   @keyframes bounce {
+       0% {
+           -webkit-transform: translate(0, 0);
+           transform: translate(0, 0);
+       }
+
+       50% {
+           -webkit-transform: translate(0, 10px);
+           transform: translate(0, 10px);
+       }
+
+       100% {
+           -webkit-transform: translate(0, 0);
+           transform: translate(0, 0);
+       }
+   }
+
    @keyframes pulse {
        0% {
            box-shadow: 0 0 0 0 rgba(253, 87, 191, 0.99);
@@ -600,38 +643,24 @@ i {
        }
    }
 
-/* other header*/
-.hero__scroll {
-    position: absolute;
-    bottom: 60px;
-    width: 200px;
-    margin: auto;
-    display: block;
-    cursor: pointer;
-    padding-bottom: 40px;
-    left: 0;
-    right: 0;
-    text-transform: uppercase;
-    text-align: center;
+   @-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
 
-    .fa-chevron-down {
-            margin-top: 20px;
-            display: block;
-            -webkit-animation: pulse 2s infinite;
-            animation: pulse 2s infinite;
-            color:  #ffee00;;
+    to {
+        opacity: 1;
     }
 }
 
-.fa-chevron-down::before{
-    border-style: solid;
-    border-width: 0.25em 0.25em 0 0;
-    content: '';
-    display: inline-block;
-    height: 20px;
-    position: relative;
-    vertical-align: top;    
-    width: 20px;
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
    /*media queries*/
@@ -668,8 +697,8 @@ i {
        }
 
        .section-heading h1 {
-               font-size: 3rem;
-           }
+           font-size: 3rem;
+       }
 
        .about-details .nav-list {
            flex-direction: initial;
@@ -742,12 +771,6 @@ i {
            order: 2;
        }
 
-       /* save for later
-       timeline p{
-           font-size: 1.4rem;
-       }
-       */
-
        form {
            width: 100%;
        }
@@ -755,4 +778,9 @@ i {
        .up {
            right: 2rem;
        }
+
+       /* save for later
+        timeline p{
+           font-size: 1.4rem;
+        } */
    }

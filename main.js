@@ -20,8 +20,13 @@ $(document).ready(function () {
     });
 
     $('#up').on('click', function () {
-        $('#up').animate( keyframes, {
+        $('html, body').animate( keyframes, {
             scrollTop: 0
         }, options, 2000);
+    });
+
+    AOS.init({
+        easing: 'ease',
+        duration: 1800
     });
 });

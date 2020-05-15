@@ -208,7 +208,7 @@ li {
   z-index: 1;
 }
 .landing-text h1 {
-  font-size: 7rem;
+  font-size: 12rem;
   font-family: "Kaushan Script", cursive;
   background: linear-gradient(to top, #ffe838, #fd57bf);
   -webkit-background-clip: text;
@@ -222,7 +222,37 @@ li {
   font-weight: 400;
 }
 
-*, *::before, *::after {
+.hero__scroll {
+  position: absolute;
+  bottom: 60px;
+  width: 200px;
+  margin: auto;
+  display: block;
+  cursor: pointer;
+  padding-bottom: 40px;
+  left: 0;
+  right: 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+.hero__scroll .down {
+  margin-top: 30px;
+  display: block;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
+  color: #FF4081;
+  top: -2.5rem;
+  right: 5rem;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -312,26 +342,12 @@ user agent stylesheet i {
 }
 
 .google-docs-icon {
+  margin-left: 0px;
+  margin-right: 0px;
   -webkit-filter: saturate(0%) grayscale(100%) brightness(69%) contrast(1000%) invert(1);
   filter: saturate(0%) grayscale(100%) brightness(69%) contrast(1000%) invert(1);
 }
 
-@-webkit-keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 .google-docs-icon:hover {
   -webkit-filter: grayscale(0);
   filter: none;
@@ -340,6 +356,17 @@ user agent stylesheet i {
 }
 
 /* services */
+/* ... */
+/* skills */
+.my-skills i {
+  font-size: 6rem;
+  transition: color 650ms;
+  margin-top: 6rem;
+}
+.my-skills h3 {
+  text-align: center;
+}
+
 /* portfolio */
 .portfolio-item {
   display: flex;
@@ -353,12 +380,12 @@ user agent stylesheet i {
 }
 
 .profile-img {
-  width: 50rem;
-  flex: 1;
+  max-width: 60rem;
 }
 
 .portfolio-description {
   flex: 1;
+  max-width: 60rem;
 }
 .portfolio-description h1 {
   font-size: 3rem;
@@ -374,9 +401,8 @@ user agent stylesheet i {
 }
 .portfolio-description h6 {
   font-size: 1.5rem;
-  text-transform: uppercase;
   font-weight: 300;
-  opacity: 0.3;
+  opacity: 0.5;
 }
 .portfolio-description .cta {
   display: inline-block;
@@ -450,7 +476,7 @@ input[type=submit]:hover {
   position: absolute;
   width: 5rem;
   height: 5rem;
-  background-color: #eee;
+  background-color: #ffffff;
   top: -2.5rem;
   right: 5rem;
   border-radius: 100%;
@@ -474,6 +500,20 @@ footer {
 }
 
 /*Start animations*/
+@keyframes bounce {
+  0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(0, 10px);
+    transform: translate(0, 10px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
 @keyframes pulse {
   0% {
     box-shadow: 0 0 0 0 rgba(253, 87, 191, 0.99);
@@ -485,39 +525,22 @@ footer {
     box-shadow: 0 0 0 0 rgba(253, 87, 191, 0);
   }
 }
-/* other header*/
-.hero__scroll {
-  position: absolute;
-  bottom: 60px;
-  width: 200px;
-  margin: auto;
-  display: block;
-  cursor: pointer;
-  padding-bottom: 40px;
-  left: 0;
-  right: 0;
-  text-transform: uppercase;
-  text-align: center;
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-.hero__scroll .fa-chevron-down {
-  margin-top: 20px;
-  display: block;
-  -webkit-animation: pulse 2s infinite;
-  animation: pulse 2s infinite;
-  color: #ffee00;
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-
-.fa-chevron-down::before {
-  border-style: solid;
-  border-width: 0.25em 0.25em 0 0;
-  content: "";
-  display: inline-block;
-  height: 20px;
-  position: relative;
-  vertical-align: top;
-  width: 20px;
-}
-
 /*media queries*/
 @media screen and (max-width: 768px) {
   body {
@@ -620,11 +643,6 @@ footer {
     order: 2;
   }
 
-  /* save for later
-  timeline p{
-      font-size: 1.4rem;
-  }
-  */
   form {
     width: 100%;
   }
@@ -632,6 +650,11 @@ footer {
   .up {
     right: 2rem;
   }
+
+  /* save for later
+   timeline p{
+      font-size: 1.4rem;
+   } */
 }
 
 /*# sourceMappingURL=main.css.map */
