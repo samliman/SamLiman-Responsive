@@ -357,6 +357,7 @@ user agent stylesheet i {
 
 /* services */
 /* ... */
+
 /* skills */
 .my-skills i {
   font-size: 6rem;
@@ -404,6 +405,7 @@ user agent stylesheet i {
   font-weight: 300;
   opacity: 0.5;
 }
+
 .portfolio-description .cta {
   display: inline-block;
   font-size: 1.5rem;
@@ -421,10 +423,10 @@ user agent stylesheet i {
   color: #039440;
 }
 
-/* contacts */
-.contact {
+/* contact */
+/* .contact {
   background-color: #221e3f;
-}
+} */
 
 form {
   width: 70%;
@@ -447,8 +449,8 @@ textarea {
 
 input[type=submit] {
   width: initial;
-  background-color: #fd57bf;
-  color: #eee;
+  /* background-color: #fd57bf; */
+  color: rgb(238, 238, 238);
   padding: 1rem 2rem;
   border-radius: 0.8rem;
   cursor: pointer;
@@ -458,6 +460,21 @@ input[type=submit] {
 input[type=submit]:hover {
   color: #221e3f;
   background-color: #ffe838;
+}
+
+.contact a {
+  display: inline-block;
+   color: #3883ff;
+  transition: color 650ms;
+}
+.contact .a {
+  display: inline-block;
+  margin-top: 2.5rem;
+    color: #3883ff;
+  transition: color 650ms;
+}
+.contact a:hover {
+  color: #039440;
 }
 
 /*footer*/
